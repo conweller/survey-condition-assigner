@@ -6,19 +6,21 @@ use rocket_contrib::json::Json;
 
 #[macro_use] extern crate rocket;
 
-
-const NUM_BLOCKS: usize = 9;
-
 #[derive(Serialize, Deserialize)]
 struct MyResponse {
-    contents: Vec<(String, String)>
+    tweet_assignments: Vec<Assignment>
 }
 
+#[derive(Serialize, Deserialize)]
+struct Assignment {
+    source: String,
+    alt_text: String,
+}
 
 #[get("/")]
 fn assignment() -> Json<MyResponse> {
     let response = MyResponse{
-        contents: get_assignment(),
+        tweet_assignments: get_assignment(ALT_TEXTS.to_vec()),
     };
     Json(response)
         
@@ -30,47 +32,47 @@ enum Condition {
     Control,
 }
 
-const DESCRIPTIONS: [(&str, &str, &str); NUM_BLOCKS] = [
+const ALT_TEXTS: [(&str, &str, &str); 9] = [
     (
-        "our description 1",
-        "microsoft's description 1",
-        "control description 1"
+        "our alt_text 1",
+        "microsoft's alt_text 1",
+        "control alt_text 1"
     ), (
-        "our description 2",
-        "microsoft's description 2",
-        "control description 2"
+        "our alt_text 2",
+        "microsoft's alt_text 2",
+        "control alt_text 2"
     ), (
-        "our description 3",
-        "microsoft's description 3",
-        "control description 3"
+        "our alt_text 3",
+        "microsoft's alt_text 3",
+        "control alt_text 3"
     ), (
-        "our description 4",
-        "microsoft's description 4",
-        "control description 4"
+        "our alt_text 4",
+        "microsoft's alt_text 4",
+        "control alt_text 4"
     ), (
-        "our description 5",
-        "microsoft's description 5",
-        "control description 5"
+        "our alt_text 5",
+        "microsoft's alt_text 5",
+        "control alt_text 5"
     ), (
-        "our description 6",
-        "microsoft's description 6",
-        "control description 6"
+        "our alt_text 6",
+        "microsoft's alt_text 6",
+        "control alt_text 6"
     ), (
-        "our description 7",
-        "microsoft's description 7",
-        "control description 7"
+        "our alt_text 7",
+        "microsoft's alt_text 7",
+        "control alt_text 7"
     ), (
-        "our description 8",
-        "microsoft's description 8",
-        "control description 8"
+        "our alt_text 8",
+        "microsoft's alt_text 8",
+        "control alt_text 8"
     ), (
-        "our description 9",
-        "microsoft's description 9",
-        "control description 9"
+        "our alt_text 9",
+        "microsoft's alt_text 9",
+        "control alt_text 9"
     ),
 ];
 
-fn get_assignment() -> Vec<(String, String)> {
+fn get_assignment(alt_texts: Vec<(&str, &str, &str)>) -> Vec<Assignment> {
 
     let mut rng = thread_rng();
     let mut conditions: Vec<&Condition> = [
@@ -80,28 +82,29 @@ fn get_assignment() -> Vec<(String, String)> {
     ]
         .iter()
         .cycle()
-        .take(NUM_BLOCKS)
+        .take(alt_texts.len())
         .collect();
 
     conditions.shuffle(&mut rng);
 
     conditions
         .iter()
-        .zip(DESCRIPTIONS.iter())
-        .map(|(cond, desc)| {
+        .zip(alt_texts.iter())
+        .map(|(cond, alt)| {
             match cond {
-                Condition::Ours => return (
-                    String::from("Ours"),
-                    String::from(desc.0)
-                ),
-                Condition::Microsoft => return (
-                    String::from("Microsoft"),
-                    String::from(desc.1)
-                ),
-                Condition::Control => return (
-                    String::from("Control"),
-                    String::from(desc.2)
-                ),
+                Condition::Ours => return Assignment {
+                    source: String::from("Ours"),
+                    alt_text: String::from(alt.0)
+                },
+                Condition::Microsoft => return Assignment {
+                    source: String::from("Microsoft"),
+                    alt_text: String::from(alt.1)
+
+                },
+                Condition::Control => return Assignment {
+                    source: String::from("Control"),
+                    alt_text: String::from(alt.2)
+                },
             }
         })
     .collect()
