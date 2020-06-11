@@ -34,79 +34,79 @@ enum Condition {
 
 const ALT_TEXTS: [(&str, &str, &str); 9] = [
     (
-        "This graph titled ubc vancouver math course enrolment ( fte ) 2010 to
-        2019 2500 shows a rising trend in enrolment in math courses over year.
-        The X-Axis goes from 2010 to 201 8. The Y-Axis goes to 2500. The end of
+        "This graph titled ubc vancouver math course enrolment ( fte ) 2010 to \
+        2019 2500 shows a rising trend in enrolment in math courses over year. \
+        The X-Axis goes from 2010 to 201 8. The Y-Axis goes to 2500. The end of \
         the graph continues to rise and the graph show s few fluctuations.",
 
         "A screenshot of a cell phone",
 
         "Image"
     ), (
-        "This graph titled monthly passenger count september 2018 - august 2019
-        shows a rising trend in of passengers over month. The X-Axis goes to 19.
-        The Y-Axis goes from 18 to 18. The end of the graph continues to rise
+        "This graph titled monthly passenger count september 2018 - august 2019 \
+        shows a rising trend in of passengers over month. The X-Axis goes to 19. \
+        The Y-Axis goes from 18 to 18. The end of the graph continues to rise \
         and the graph shows few fluctuations.",
 
         "A close up of a map",
 
         "Image"
     ), (
-        "This graph titled arsenal team rating average : premier league shows a
-        changing trend in dollars over year. The X-Axis goes to 10. The Y-Axis
-        goes . The end of the graph stabilizing and the graph shows few
+        "This graph titled arsenal team rating average : premier league shows a \
+        changing trend in dollars over year. The X-Axis goes to 10. The Y-Axis \
+        goes . The end of the graph stabilizing and the graph shows few \
         fluctuations.",
 
         "A screenshot of a cell phone",
 
         "Image"
     ), (
-        "This graph titled gain required to recover a losing position shows a
-        rising trend in required to breakeven in position over year. The X-Axis
-        goes to 100. The Y-Axis goes . The end of the graph continues to rise
+        "This graph titled gain required to recover a losing position shows a \
+        rising trend in required to breakeven in position over year. The X-Axis \
+        goes to 100. The Y-Axis goes . The end of the graph continues to rise \
         and the graph shows few fluctuations.",
 
         "A close up of text on a black background",
 
         "Image"
     ), (
-        "This graph titled weight shows a changing trend in weight over year.
-        The X-Axis goes to 19. The Y-Axis goes . The end of the graph is falling
+        "This graph titled weight shows a changing trend in weight over year. \
+        The X-Axis goes to 19. The Y-Axis goes . The end of the graph is falling \
         and the graph shows many fluctuations.",
 
         "A close up of a map",
 
         "Image"
     ), (
-        "This graph titled daily stock market flunctuation index shows a
-        changing trend in index over month. The X-Axis goes to 19. The Y-Axis
-        goes to 4000. The end of the graph is rising and the graph shows many
+        "This graph titled daily stock market flunctuation index shows a \
+        changing trend in index over month. The X-Axis goes to 19. The Y-Axis \
+        goes to 4000. The end of the graph is rising and the graph shows many \
         fluctuations.",
 
         "A close up of a map",
 
         "Image"
     ), (
-        "This graph titled snapchat / instagram stories of dog shows a rising
-        trend in dollars over year. The X-Axis goes . The Y-Axis goes . The end
+        "This graph titled snapchat / instagram stories of dog shows a rising \
+        trend in dollars over year. The X-Axis goes . The Y-Axis goes . The end \
         of the graph continues to rise and the graph shows few fluctuations.",
 
         "A screenshot of a cell phone",
 
         "Image"
     ), (
-        "This graph titled federal surplus or deficit [ - ] shows a rising trend
-        in of dollars over year. The X-Axis goes from 2010 to 2017. The Y-Axis
-        goes from 400 to 400. The end of the graph is falling and the graph
+        "This graph titled federal surplus or deficit [ - ] shows a rising trend \
+        in of dollars over year. The X-Axis goes from 2010 to 2017. The Y-Axis \
+        goes from 400 to 400. The end of the graph is falling and the graph \
         shows few fluctuations.",
 
         "A screenshot of a cell phone",
 
         "Image"
     ), (
-        "This graph titled unemployment rate for african americans , 1972 - 2019
-        shows a changing trend in rate over year. The X-Axis goes from 1972 to
-        2017. The Y-Axis goes . The end of the graph is rising and the graph
+        "This graph titled unemployment rate for african americans , 1972 - 2019 \
+        shows a changing trend in rate over year. The X-Axis goes from 1972 to \
+        2017. The Y-Axis goes . The end of the graph is rising and the graph \
         shows many fluctuations.",
 
         "A close up of a map",
