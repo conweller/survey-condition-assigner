@@ -37,7 +37,7 @@ const ALT_TEXTS: [(&str, &str, &str); 9] = [
         "This graph titled ubc vancouver math course enrolment ( fte ) 2010 to \
         2019 2500 shows a rising trend in enrolment in math courses over year. \
         The X-Axis goes from 2010 to 201 8. The Y-Axis goes to 2500. The end of \
-        the graph continues to rise and the graph show s few fluctuations.",
+        the graph continues to rise and the graph show's few fluctuations.",
 
         "A screenshot of a cell phone",
 
